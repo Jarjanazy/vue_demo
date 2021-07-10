@@ -1,12 +1,16 @@
 <template>
   <div>
+    <about-me></about-me>
     <button>{{msg}}</button>
     <input v-model="msg">
   </div>
 </template>
 
 <script>
+import AboutMe from './AboutMe.vue'
+
 export default {
+  components: { AboutMe },
   data(){
     return {
       msg : "hey"
