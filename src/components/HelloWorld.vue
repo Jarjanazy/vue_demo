@@ -1,28 +1,17 @@
 <template>
-<div>
   <div>
-    <h2>SUP {{name}}</h2>
-    <button v-bind:disabled="isHere"> Click </button>
+    <button>{{msg}}</button>
+    <input v-model="msg">
   </div>
-
-  <div>
-    <h2 v-for="(car, index) in cars" :key="index">
-      {{car}}
-    </h2>
-  </div>
-</div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
   data(){
     return {
-      name : "abdo",
-      isHere : false,
-      cars : ["toyota", "jaaag"]
+      msg : "hey"
     }
-  }
+  },
 }
 </script>
 
