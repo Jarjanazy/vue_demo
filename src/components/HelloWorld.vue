@@ -1,7 +1,8 @@
 <template>
   <div>
     <about-me msg="test1"></about-me>
-    <button @click="msg += 1">{{computedMsg}}</button>
+    <button @click="increaseMsg">{{computedMsg}}</button>
+    <h2>pressed {{msg}} times</h2>
   </div>
 </template>
 
@@ -19,6 +20,11 @@ export default {
       computedMsg: function(){
         return (this.msg % 2) * 10;
       }
+  },
+  methods:{
+    increaseMsg: function(){
+      this.msg += 1;
+    }
   }
 }
 </script>
