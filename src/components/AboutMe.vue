@@ -5,9 +5,10 @@
 <script>
 export default {
     name:"about-me",
+    props: ['msg'],
     data : function(){
         return{
-            me : "this is me"
+            me : "this is me " + this.msg
         }  
     }
 }

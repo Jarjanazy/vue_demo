@@ -1,8 +1,7 @@
 <template>
   <div>
-    <about-me></about-me>
-    <button>{{msg}}</button>
-    <input v-model="msg">
+    <about-me msg="test1"></about-me>
+    <button @click="msg += 1">{{computedMsg}}</button>
   </div>
 </template>
 
@@ -11,11 +10,16 @@ import AboutMe from './AboutMe.vue'
 
 export default {
   components: { AboutMe },
-  data(){
+  data: function() {
     return {
-      msg : "hey"
+      msg : 1
     }
   },
+  computed:{
+      computedMsg: function(){
+        return (this.msg % 2) * 10;
+      }
+  }
 }
 </script>
 
