@@ -1,8 +1,8 @@
 <template>
   <div>
-    <about-me msg="test1"></about-me>
-    <button @click="increaseMsg">{{computedMsg}}</button>
-    <h2>pressed {{msg}} times</h2>
+    <input v-model="text">
+    <about-me :msg="text"></about-me>
+    <about-me :msg="text"></about-me>
   </div>
 </template>
 
@@ -13,17 +13,7 @@ export default {
   components: { AboutMe },
   data: function() {
     return {
-      msg : 1
-    }
-  },
-  computed:{
-      computedMsg: function(){
-        return (this.msg % 2) * 10;
-      }
-  },
-  methods:{
-    increaseMsg: function(){
-      this.msg += 1;
+      text : "Write here"
     }
   }
 }

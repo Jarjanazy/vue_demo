@@ -1,5 +1,5 @@
 <template>
-    <h2> {{me}}</h2>
+    <h2> {{msg}}</h2>
 </template>
 
 <script>
@@ -8,7 +8,7 @@ export default {
     props: ['msg'],
     data : function(){
         return{
-            me : "this is me " + this.msg
+            
         }  
     }
 }
