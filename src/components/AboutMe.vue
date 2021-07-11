@@ -1,11 +1,12 @@
 <template>
-    <h2> {{msg}}</h2>
+    <div>
+        <button @click="$emit('clicked')">Press me!!</button>
+    </div>
 </template>
 
 <script>
 export default {
     name:"about-me",
-    props: ['msg'],
     data : function(){
         return{
             

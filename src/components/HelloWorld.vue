@@ -1,8 +1,6 @@
 <template>
   <div>
-    <input v-model="text">
-    <about-me :msg="text"></about-me>
-    <about-me :msg="text"></about-me>
+    <about-me v-on:clicked="pressed"></about-me>
   </div>
 </template>
 
@@ -14,6 +12,11 @@ export default {
   data: function() {
     return {
       text : "Write here"
+    }
+  },
+  methods:{
+    pressed : function(){
+      alert('stop it!!!!');
     }
   }
 }
