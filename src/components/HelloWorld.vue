@@ -1,7 +1,7 @@
 <template>
   <div>
-    <about-me :msg="msg"/>
-    <input type="text" placeholder="enter string" v-model="msg">
+    <about-me v-model="msg"/>
+    <h2> {{msg}} </h2>
   </div>
 </template>
 

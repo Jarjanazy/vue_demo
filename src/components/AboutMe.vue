@@ -1,19 +1,19 @@
 <template>
     <div>
-      <h2>{{msg}}</h2>
+      <input type="text" placeholder="Suggest changes" @input="emitText">
     </div>
 </template>
 
 <script>
 export default {
     name:"about-me",
-    props : {
-        msg: {type : String}
-    },
     data : function(){
-        return{
-            
-        }  
+        return{}  
+    },
+    methods: {
+        emitText : function(e){
+            this.$emit('input', e.target.value);
+        }
     }
 }
 </script>
